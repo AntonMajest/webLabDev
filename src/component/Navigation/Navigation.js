@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {BrowserRouter, NavLink, Switch, Redirect, Route } from "react-router-dom";
-import './Navigation.css'
+import {BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import './Navigation.scss'
 import Home from "../Main/Home/Home";
 import Header from "../Header/Header";
 import {aboutData, homeData, interestData, universityData, professionData} from "../../mock-data/data";

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import './Footer.css'
+import './Footer.scss'
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons";
-import {Link, Redirect} from "react-router-dom";
+
 
 class Footer extends Component {
     render() {

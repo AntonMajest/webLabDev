@@ -8,13 +8,12 @@ import Typography from '@material-ui/core/Typography';
 
 
 
-import './Main.css'
+import './Main.scss'
 class Main extends Component {
     render() {
         let {data} = this.props;
         return (
             <div className={'main-wrapper'} >
-
                 <div className={'main-title'}>
                     {data.title}
                 </div>
@@ -22,10 +21,14 @@ class Main extends Component {
                 <div >
                 <Card  className={'MuiCard-root'}>
                     <CardMedia
-                    >
-                        <img src={data.img} alt="picture" className={'img-main'}/></CardMedia>
+                        component="img"
+                        alt="picture"
+                        image={data.img}
+                        className='img-main'
+                    />
+
                     <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p" >
+                        <Typography variant="body2" color="textSecondary" component={'div'} >
                             <div className={'main-text'}>
                             {data.text}
                             </div>
@@ -40,25 +43,15 @@ class Main extends Component {
                             >
                                 <img src={data.annImg} alt="picture" className={'img-main'}/></CardMedia>
                             <CardContent>
-                                <Typography variant="body2" color="textSecondary" component="p" >
+                                <Typography variant="body2" color="textSecondary" component={'div'}>
                                     <div className={'main-text'}>
                                         {data.annData}
                                     </div>
                                 </Typography>
                             </CardContent>
                         </Card>
-
                     </div>
                 </Carousel>
-
-                {/*<div className={'displayflx'}>
-                    <div className={'main-img'}>
-                        <img src={data.img} alt="picture" className={'img-main'}/>
-                    </div>
-                    <div className={'main-text'}>
-
-                    </div>
-                </div>*/}
             </div>
         );
     }
