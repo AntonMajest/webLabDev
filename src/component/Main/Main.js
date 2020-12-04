@@ -21,11 +21,10 @@ class Main extends Component {
                 <div >
                 <Card  className={'MuiCard-root'}>
                     <CardMedia
-                        component="img"
-                        alt="picture"
-                        image={data.img}
-                        className='img-main'
-                    />
+
+                    >
+                        <img src={data.img} alt="picture" className={'img-main'}/>
+                    </CardMedia>
 
                     <CardContent>
                         <Typography variant="body2" color="textSecondary" component={'div'} >
