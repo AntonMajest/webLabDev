@@ -1,8 +1,9 @@
-// Set this to true for production
-var doCache = false;
 
-// Name our cache
+var doCache = true;
+
+
 var CACHE_NAME = 'my-pwa-cache-v1';
+
 
 
 self.addEventListener("activate", event => {
@@ -43,8 +44,7 @@ self.addEventListener('install', function(event) {
     }
 });
 
-// When the webpage goes to fetch files, we intercept that request and serve up the matching files
-// if we have them
+
 self.addEventListener('fetch', function(event) {
     if (doCache) {
         event.respondWith(
